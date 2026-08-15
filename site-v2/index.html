@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מוניות לאוניד חדרה | מונית בחדרה והסביבה ונסיעות לנתב"ג</title>
+<meta name="description" content="מוניות לאוניד חדרה. נסיעות בחדרה ובכל הסביבה ונסיעות לנתב&quot;ג בכל שעה. מענה אישי של הנהג, בלי מוקד. חייגו 054-593-6884.">
+<meta name="theme-color" content="#FFC019">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="מוניות לאוניד חדרה | מונית בחדרה והסביבה">
+<meta property="og:description" content="נסיעות בחדרה ובכל הסביבה ונסיעות לנתב&quot;ג בכל שעה. מענה אישי של הנהג. חייגו 054-593-6884.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero.webp" type="image/webp" fetchpriority="high">
+
+<style>
+@font-face{font-family:'Heebo';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('fonts/heebo-hebrew.woff2') format('woff2');
+  unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('fonts/heebo-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --yellow:#FFC019;--yellow-deep:#E4A400;--yellow-pale:#FFE49B;
+  --ink:#0B0B0B;--ink-2:#1B1B1B;--soot:#141414;
+  --cream:#FFF8E9;--paper:#FFFFFF;
+  --grey:#4A4A4A;--muted:#8B8B8B;
+  --line:3px solid var(--ink);
+  --shadow:7px 7px 0 var(--ink);
+  --shadow-sm:4px 4px 0 var(--ink);
+  --max:1180px;
+  --bar:82px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'Heebo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  font-size:17px;line-height:1.65;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{line-height:1.05;margin:0;font-weight:900;letter-spacing:-.02em}
+p{margin:0}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px}
+.hidden-focusable:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;inset-inline-start:-9999px;top:0;background:var(--ink);color:var(--yellow);padding:12px 18px;z-index:200;font-weight:800;border-radius:0 0 10px 0}
+.skip:focus{inset-inline-start:0}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[dir="ltr"]{unicode-bidi:isolate;white-space:nowrap}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:900;font-size:17px;letter-spacing:-.01em;text-decoration:none;
+  padding:16px 26px;border-radius:999px;border:var(--line);
+  box-shadow:var(--shadow-sm);transition:transform .14s ease,box-shadow .14s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.btn--solid{background:var(--yellow);color:var(--ink)}
+.btn--solid:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn--dark{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
+.btn--dark:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--yellow-deep)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink);box-shadow:none}
+.btn--ghost:hover{background:rgba(11,11,11,.06)}
+.btn svg{width:19px;height:19px;flex:0 0 auto}
+.btn .num{font-variant-numeric:tabular-nums}
+.btn--lg{width:100%;max-width:420px;padding:19px 20px;font-size:clamp(17px,4.6vw,21px)}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;background:
+    repeating-linear-gradient(135deg,rgba(11,11,11,.05) 0 2px,transparent 2px 26px),
+    var(--yellow);
+  padding:16px 16px 54px;
+}
+.hero-top{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  max-width:var(--max);margin-inline:auto;padding:10px 8px 22px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:16.5px}
+.brand .mark{
+  width:38px;height:38px;border-radius:11px;background:var(--ink);
+  display:grid;place-items:center;flex:0 0 auto;border:2px solid var(--ink);
+}
+.brand .mark svg{width:21px;height:21px;fill:var(--yellow)}
+.brand small{display:block;font-weight:600;font-size:11.5px;color:var(--ink-2);letter-spacing:.03em;line-height:1.3;opacity:.75}
+
+.burger{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:12px;border:var(--line);background:var(--ink);
+  flex:0 0 auto;cursor:pointer;
+}
+.burger span,.burger::before,.burger::after{content:"";display:block;width:19px;height:2.5px;background:var(--yellow);border-radius:2px}
+.burger{flex-direction:column;gap:4px}
+.burger::before,.burger::after{content:none}
+
+.nav-inline{display:none;align-items:center;gap:28px;font-weight:700;font-size:14.5px}
+.nav-inline a{text-decoration:none;padding:4px 2px;border-bottom:2px solid transparent}
+.nav-inline a:hover{border-color:var(--ink)}
+@media(min-width:900px){.nav-inline{display:flex}}
+
+.top-tel{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);
+  font-weight:800;font-size:14.5px;border:var(--line);background:var(--paper);
+  padding:9px 15px;border-radius:999px;white-space:nowrap;box-shadow:var(--shadow-sm);
+}
+.top-tel svg{width:15px;height:15px}
+
+/* hero card */
+.hero-stage{position:relative;max-width:var(--max);margin-inline:auto}
+.hero-card{
+  position:relative;background:var(--ink);border:var(--line);border-radius:28px;
+  overflow:hidden;box-shadow:10px 10px 0 var(--ink-2), 10px 10px 0 3px var(--ink);
+  display:grid;grid-template-columns:1fr;
+}
+@media(min-width:860px){.hero-card{grid-template-columns:1.02fr 1fr;min-height:560px}}
+
+.hero-copy{
+  position:relative;z-index:3;color:var(--paper);
+  padding:38px 26px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px;
+}
+@media(min-width:860px){.hero-copy{padding:0 8px 0 52px}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  color:var(--yellow);font-weight:800;font-size:13px;letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);flex:0 0 auto}
+@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.4s ease-in-out infinite}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+.hero-copy h1{font-size:clamp(38px,9.4vw,64px);text-wrap:balance}
+.hero-copy h1 .line2{color:var(--yellow);display:block}
+.hero-copy .lede{font-size:clamp(15.5px,3.8vw,17.5px);color:#CFCFCF;max-width:36ch;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.assure{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;font-weight:600;color:#BDBDBD;margin-top:4px}
+.assure span{display:inline-flex;align-items:center;gap:6px}
+.assure svg{width:14px;height:14px;fill:var(--yellow);flex:0 0 auto}
+
+.hero-photo-wrap{
+  position:relative;z-index:2;min-height:280px;
+  clip-path:polygon(0 6%,100% 0,100% 100%,0 100%);
+  background:var(--ink);
+}
+@media(min-width:860px){
+  .hero-photo-wrap{clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+}
+.hero-photo-wrap::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(11,11,11,.55) 0%,rgba(11,11,11,0) 34%);
+}
+@media(min-width:860px){
+  .hero-photo-wrap::after{background:linear-gradient(90deg,rgba(11,11,11,.65) 0%,rgba(11,11,11,0) 22%)}
+}
+.hero-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;aspect-ratio:4/5}
+@media(min-width:860px){.hero-photo-wrap img{aspect-ratio:auto;position:absolute;inset:0;object-position:50% 55%}}
+
+/* ================= diagonal dividers ================= */
+.cut{position:relative;height:56px;margin-block:-1px}
+.cut svg{display:block;width:100%;height:100%}
+.cut--cream-to-ink{fill:var(--ink)}
+.cut--ink-to-cream{fill:var(--cream)}
+.cut--cream-to-soot{fill:var(--soot)}
+
+/* ================= sections ================= */
+section{scroll-margin-top:20px}
+.sec{padding-block:58px}
+.sec-head{text-align:center;max-width:40ch;margin-inline:auto;margin-bottom:38px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+  background:var(--yellow);border:2px solid var(--ink);padding:5px 14px;border-radius:999px;
+  margin-bottom:16px;
+}
+.sec-head h2{font-size:clamp(28px,6.4vw,42px)}
+.sec-head p{margin-top:13px;color:#5A5A5A;font-size:16.5px}
+/* service cards */
+.cards{display:grid;gap:22px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  border:var(--line);border-radius:22px;overflow:hidden;background:var(--paper);
+  display:flex;flex-direction:column;box-shadow:var(--shadow);
+}
+.card figure{margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--cream);border-bottom:var(--line)}
+.card figure img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:24px 24px 26px}
+.card h3{font-size:22px;display:flex;align-items:center;gap:11px}
+.card h3 .pin{width:30px;height:30px;border-radius:9px;background:var(--yellow);border:2px solid var(--ink);display:grid;place-items:center;flex:0 0 auto}
+.card h3 .pin svg{width:16px;height:16px}
+.card p{margin-top:12px;color:#4A4A4A;font-size:16.5px}
+
+/* areas */
+.areas{position:relative;color:var(--paper);background:var(--soot);isolation:isolate;overflow:hidden}
+.areas .bg{position:absolute;inset:0;z-index:-2}
+.areas .bg img{width:100%;height:100%;object-fit:cover}
+.areas::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(10,10,10,.82)}
+.chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center}
+.chip{
+  border:2px solid var(--yellow);background:rgba(255,192,25,.08);color:var(--yellow);
+  padding:9px 17px;border-radius:999px;font-weight:800;font-size:15px;
+}
+.areas .note{text-align:center;margin-top:24px;color:#B6B6B6;font-size:15.5px}
+
+/* faq */
+.faq{max-width:780px;margin-inline:auto}
+details{border:var(--line);border-radius:16px;background:var(--paper);margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details[open]{box-shadow:var(--shadow)}
+summary{
+  list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;font-size:17.5px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+summary::-webkit-details-marker{display:none}
+summary .plus{
+  width:28px;height:28px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);flex:0 0 auto;
+  display:grid;place-items:center;font-weight:900;font-size:18px;line-height:1;
+  transition:transform .18s ease;
+}
+details[open] summary .plus{transform:rotate(45deg)}
+details .ans{padding:0 22px 20px;color:#4A4A4A;font-size:16.5px}
+
+/* final cta */
+.final{background:var(--ink);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.final::before{
+  content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:repeating-linear-gradient(135deg,rgba(255,192,25,.06) 0 2px,transparent 2px 26px);
+}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-size:clamp(30px,7.2vw,46px)}
+.final h2 .hl{color:var(--yellow)}
+.final p{margin-top:14px;color:#CFCFCF;font-size:17px}
+.final .btn{margin-inline:auto}
+.final .assure{justify-content:center;margin-top:22px}
+
+/* footer */
+footer{background:var(--soot);color:#9A9A9A;font-size:14.5px;padding:34px 0 36px;text-align:center;border-top:4px solid var(--yellow)}
+footer .fbrand{color:var(--paper);font-weight:900;font-size:16.5px}
+footer a{color:var(--yellow);text-decoration:none;font-weight:800}
+footer details{background:transparent;border:0;box-shadow:none;margin:18px auto 0;max-width:640px;text-align:start}
+footer summary{font-size:14.5px;font-weight:700;color:#B8B8B8;padding:10px 0;justify-content:center}
+footer summary .plus{width:22px;height:22px;font-size:14px;background:#333;border-color:#333;color:var(--yellow)}
+footer details .ans{padding:0;color:#8A8A8A;font-size:14px;line-height:1.7}
+
+/* sticky call bar */
+.bar{
+  position:fixed;inset-inline:0;bottom:0;z-index:80;
+  background:var(--ink);border-top:3px solid var(--yellow);
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  transform:translateY(120%);transition:transform .28s ease;
+}
+.bar.show{transform:translateY(0)}
+.bar a{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--yellow);color:var(--ink);text-decoration:none;border:2px solid var(--ink);
+  font-weight:900;font-size:clamp(16.5px,4.9vw,19px);padding:14px 12px;border-radius:13px;
+  max-width:520px;margin-inline:auto;
+}
+.bar a svg{width:20px;height:20px;flex:0 0 auto}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+
+/* mobile nav overlay */
+.overlay{
+  position:fixed;inset:0;z-index:150;background:var(--yellow);
+  display:flex;flex-direction:column;
+  transform:translateX(105%);transition:transform .32s cubic-bezier(.65,0,.35,1);
+  padding:20px;
+}
+html[dir="rtl"] .overlay{transform:translateX(-105%)}
+body.nav-open .overlay{transform:translateX(0)}
+.overlay-top{display:flex;justify-content:space-between;align-items:center}
+.overlay-close{
+  width:44px;height:44px;border-radius:12px;border:var(--line);background:var(--ink);color:var(--yellow);
+  display:grid;place-items:center;font-size:22px;font-weight:900;cursor:pointer;line-height:1;
+}
+.overlay-links{display:flex;flex-direction:column;gap:6px;margin-top:auto;margin-bottom:auto}
+.overlay-links a{
+  font-size:clamp(30px,10vw,46px);font-weight:900;text-decoration:none;color:var(--ink);
+  padding:10px 0;border-bottom:3px solid rgba(11,11,11,.12);
+}
+.overlay-foot{padding-top:16px}
+body.nav-open{overflow:hidden}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+
+<!-- ===================== MOBILE NAV OVERLAY ===================== -->
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="overlay-top">
+    <span class="brand">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 11l1.5-4A2 2 0 0 1 8.4 5.6h7.2A2 2 0 0 1 17.5 7L19 11h.5a1.5 1.5 0 0 1 1.5 1.5V17a1 1 0 0 1-1 1h-1v.5a1.5 1.5 0 0 1-3 0V18H8v.5a1.5 1.5 0 0 1-3 0V18H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.1 0h9.8l-1.1-3.1a.6.6 0 0 0-.6-.4H8.8a.6.6 0 0 0-.6.4L7.1 11zM7 13.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm10 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM9.5 2.5h5a1 1 0 0 1 0 2h-5a1 1 0 0 1 0-2z"/></svg></span>
+      <span>מוניות לאוניד</span>
+    </span>
+    <button class="overlay-close" id="overlayClose" aria-label="סגירת תפריט">×</button>
+  </div>
+  <nav class="overlay-links" aria-label="ניווט ראשי">
+    <a href="#services">השירותים שלי</a>
+    <a href="#why">הנסיעה</a>
+    <a href="#areas">אזורי שירות</a>
+    <a href="#faq">שאלות</a>
+  </nav>
+  <div class="overlay-foot">
+    <a class="btn btn--dark btn--lg" href="tel:0545936884" data-call="overlay">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+      <span>חייגו</span><span class="num" dir="ltr">054-593-6884</span>
+    </a>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 11l1.5-4A2 2 0 0 1 8.4 5.6h7.2A2 2 0 0 1 17.5 7L19 11h.5a1.5 1.5 0 0 1 1.5 1.5V17a1 1 0 0 1-1 1h-1v.5a1.5 1.5 0 0 1-3 0V18H8v.5a1.5 1.5 0 0 1-3 0V18H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.1 0h9.8l-1.1-3.1a.6.6 0 0 0-.6-.4H8.8a.6.6 0 0 0-.6.4L7.1 11zM7 13.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm10 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM9.5 2.5h5a1 1 0 0 1 0 2h-5a1 1 0 0 1 0-2z"/></svg>
+      </span>
+      <span>מוניות לאוניד<small>חדרה והסביבה</small></span>
+    </div>
+
+    <nav class="nav-inline" aria-label="ניווט ראשי">
+      <a href="#services">השירותים שלי</a>
+      <a href="#why">הנסיעה</a>
+      <a href="#areas">אזורי שירות</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:10px">
+      <a class="top-tel" href="tel:0545936884" data-call="header">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+        <span dir="ltr">054-593-6884</span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="פתיחת תפריט" aria-controls="overlay" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-stage">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span>זמין עכשיו לנסיעות</span>
+        <h1>מונית בחדרה<span class="line2">והסביבה</span></h1>
+        <p class="lede">אני לאוניד, נהג מונית בכל אזור חדרה והסביבה, אשמח לתת לכם שירות נסיעות בתוך ומחוץ לעיר, כולל נסיעות לנתב״ג. התקשרו עכשיו לפרטים נוספים</p>
+        <div class="hero-actions">
+          <a class="btn btn--solid" href="tel:0545936884" data-call="hero">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+            <span>חייגו עכשיו</span><span class="num" dir="ltr">054-593-6884</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <picture>
+          <source media="(min-width:860px)" srcset="img/hero-wide.webp" type="image/webp">
+          <source media="(min-width:860px)" srcset="img/hero-wide.jpg">
+          <source srcset="img/hero.webp" type="image/webp">
+          <img src="img/hero.jpg" alt="מונית לבנה עם שלט גג צהוב חונה ברחוב מגורים בחדרה באור אחר צהריים" fetchpriority="high" width="900" height="1297">
+        </picture>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="cut cut--cream-to-ink" aria-hidden="true"><svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,56 L0,20 Z"/></svg></div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="sec wrap" id="services" aria-labelledby="services-h">
+  <div class="sec-head">
+    <span class="kicker">השירותים שלי</span>
+    <h2 id="services-h">אני אקח אתכם גם בתוך העיר וגם לנתב״ג</h2>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <figure>
+        <picture>
+          <source srcset="img/night.webp" type="image/webp">
+          <img src="img/night.jpg" alt="מונית לבנה נוסעת בשדרה בחדרה בשעת דמדומים, ארובות תחנת הכוח באופק" loading="lazy" width="1400" height="788">
+        </picture>
+      </figure>
+      <div class="card-body">
+        <h3>
+          <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 6.2 12.3 6.5 12.6a.7.7 0 0 0 1 0C12.8 21.3 19 14.1 19 9a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg></span>
+          נסיעות בחדרה ובסביבה
+        </h3>
+        <p>לעבודה, לקופת חולים, לקניות או לערב בחוץ. אני מגיע אליכם מהר ואתם יודעים בדיוק מי הנהג שמחכה לכם למטה.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <figure>
+        <picture>
+          <source srcset="img/airport.webp" type="image/webp">
+          <img src="img/airport.jpg" alt="מונית לבנה עם תא מטען פתוח ומזוודה ממתינה בטרמינל נתב&quot;ג לפנות בוקר" loading="lazy" width="1000" height="750">
+        </picture>
+      </figure>
+      <div class="card-body">
+        <h3>
+          <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span>
+          נסיעות לנתב"ג
+        </h3>
+        <p>טיסה מוקדמת זה הזמן שהכי קל להילחץ בו. אני אוסף אתכם מהבית בשעה שסיכמנו, עם מקום למזוודות, ואתם מגיעים לטרמינל רגועים ובזמן.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== AREAS ===================== -->
+<section class="sec areas" id="areas" aria-labelledby="areas-h">
+  <div class="bg">
+    <picture>
+      <source srcset="img/night.webp" type="image/webp">
+      <img src="img/night.jpg" alt="" aria-hidden="true" loading="lazy" width="1400" height="788">
+    </picture>
+  </div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">אזורי שירות</span>
+      <h2 id="areas-h">לאן אני מגיע</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">חדרה</span>
+      <span class="chip">פרדס חנה-כרכור</span>
+      <span class="chip">בנימינה</span>
+      <span class="chip">גבעת עדה</span>
+      <span class="chip">אור עקיבא</span>
+      <span class="chip">קיסריה</span>
+      <span class="chip">זכרון יעקב</span>
+      <span class="chip">חריש</span>
+      <span class="chip">כפר ויתקין</span>
+      <span class="chip">עמק חפר</span>
+      <span class="chip">מעגן מיכאל</span>
+    </div>
+    <p class="note">נוסעים למקום אחר בארץ? תרימו טלפון ונסגור.</p>
+  </div>
+</section>
+
+<div class="cut cut--cream-to-ink" aria-hidden="true" style="height:56px"><svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,56 L0,20 Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec wrap" id="faq" aria-labelledby="faq-h">
+  <div class="sec-head">
+    <span class="kicker">שאלות ותשובות</span>
+    <h2 id="faq-h">מה שרוב האנשים שואלים אותי</h2>
+  </div>
+
+  <div class="faq">
+    <details>
+      <summary>כמה זמן לוקח לך להגיע?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">בתוך חדרה אני בדרך כלל אצלכם תוך כמה דקות. אם אני באמצע נסיעה אני אגיד לכם בטלפון בדיוק כמה זמן לחכות, בלי לעגל פינות.</div>
+    </details>
+
+    <details>
+      <summary>אפשר להזמין נסיעה מראש?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">כן, וזה גם מה שאני ממליץ לנסיעות לנתב"ג. מתקשרים, סוגרים שעה ואני שם. אם הטיסה שלכם מוקדמת, עדיף לסגור יום קודם.</div>
+    </details>
+
+    <details>
+      <summary>כמה עולה נסיעה לנתב"ג?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">תלוי מאיפה אתם יוצאים ובאיזו שעה. מרימים טלפון, אני אומר לכם מחיר ואתם יודעים בדיוק על מה סיכמנו לפני שיוצאים לדרך.</div>
+    </details>
+
+    <details>
+      <summary>אתה נוסע גם בלילה ובסופי שבוע?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">כן. טיסות מוקדמות ונסיעות לילה זה חלק מהעבודה שלי. הכי טוב לתאם מראש בטלפון ואני אגיד לכם אם אני פנוי.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap sec">
+    <h2 id="final-h">צריכים מונית <span class="hl">עכשיו?</span></h2>
+    <p>תרימו טלפון, אני עונה ויוצא אליכם.</p>
+    <a class="btn btn--solid btn--lg" href="tel:0545936884" data-call="final">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+      <span>חייגו עכשיו</span><span class="num" dir="ltr">054-593-6884</span>
+    </a>
+    <p class="assure">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>לאוניד עונה</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>חדרה והסביבה</span>
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fbrand">מוניות לאוניד חדרה</p>
+    <p>נסיעות בחדרה ובסביבה ונסיעות לנתב"ג · <a href="tel:0545936884" data-call="footer"><span dir="ltr">054-593-6884</span></a></p>
+
+    <details>
+      <summary>הצהרת נגישות<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">
+        אנחנו רואים חשיבות בכך שכל אחד יוכל להשתמש בדף הזה. הדף נבנה עם ניגודיות צבע גבוהה, טקסט בגודל קריא, ניווט מלא באמצעות המקלדת, תיאורים חלופיים לתמונות ומבנה כותרות תקין לקוראי מסך. אם נתקלתם בבעיית נגישות כלשהי, נשמח שתתקשרו אלינו למספר <span dir="ltr">054-593-6884</span> ונטפל בה.
+      </div>
+    </details>
+  </div>
+</footer>
+
+<!-- ===================== STICKY CALL BAR ===================== -->
+<div class="bar" id="bar">
+  <a href="tel:0545936884" data-call="sticky">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+    <span>חייגו ללאוניד</span><span dir="ltr">054-593-6884</span>
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TaxiService",
+  "name":"מוניות לאוניד חדרה",
+  "description":"נסיעות במונית בחדרה ובכל הסביבה ונסיעות לנמל התעופה בן גוריון, עם מענה אישי של הנהג.",
+  "telephone":"+972545936884",
+  "areaServed":[
+    {"@type":"City","name":"חדרה"},
+    {"@type":"City","name":"פרדס חנה-כרכור"},
+    {"@type":"City","name":"בנימינה"},
+    {"@type":"City","name":"גבעת עדה"},
+    {"@type":"City","name":"אור עקיבא"},
+    {"@type":"City","name":"קיסריה"},
+    {"@type":"City","name":"זכרון יעקב"},
+    {"@type":"City","name":"חריש"}
+  ],
+  "provider":{
+    "@type":"LocalBusiness",
+    "name":"מוניות לאוניד חדרה",
+    "telephone":"+972545936884",
+    "address":{"@type":"PostalAddress","addressLocality":"חדרה","addressCountry":"IL"}
+  }
+}
+</script>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---- sticky call bar: appears once the hero CTA scrolls out of view ---- */
+  var bar = document.getElementById('bar');
+  var heroCta = document.querySelector('.hero .btn--solid');
+
+  if (bar && heroCta && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      bar.classList.toggle('show', !entries[0].isIntersecting);
+    }, {threshold: 0}).observe(heroCta);
+  } else if (bar) {
+    bar.classList.add('show');
+  }
+
+  /* ---- mobile nav overlay ---- */
+  var burger = document.getElementById('burgerBtn');
+  var overlay = document.getElementById('overlay');
+  var overlayClose = document.getElementById('overlayClose');
+
+  function openNav(){
+    document.body.classList.add('nav-open');
+    overlay.setAttribute('aria-hidden','false');
+    burger.setAttribute('aria-expanded','true');
+  }
+  function closeNav(){
+    document.body.classList.remove('nav-open');
+    overlay.setAttribute('aria-hidden','true');
+    burger.setAttribute('aria-expanded','false');
+  }
+  if (burger) burger.addEventListener('click', openNav);
+  if (overlayClose) overlayClose.addEventListener('click', closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
+
+  /* ---- call-click conversion hook ---- */
+  document.querySelectorAll('a[data-call]').forEach(function(link){
+    link.addEventListener('click', function(){
+      var where = link.getAttribute('data-call');
+      if (typeof window.gtag_report_conversion === 'function') {
+        window.gtag_report_conversion();
+      } else if (typeof window.gtag === 'function') {
+        window.gtag('event', 'call_click', {placement: where});
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event: 'call_click', placement: where});
+    }, {passive: true});
+  });
+
+  /* ---- GSAP entrance + scroll-reveal animations ---- */
+  if (window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    var heroTl = gsap.timeline({defaults:{ease:'power3.out'}});
+    heroTl
+      .from('.hero-top .brand', {opacity:0, y:-14, duration:.5})
+      .from('.hero-top .top-tel, .hero-top .burger', {opacity:0, y:-14, duration:.5}, '<')
+      .from('.hero-copy .eyebrow', {opacity:0, y:16, duration:.5}, '-=.15')
+      .from('.hero-copy h1', {opacity:0, y:24, duration:.7}, '-=.25')
+      .from('.hero-copy .lede', {opacity:0, y:18, duration:.6}, '-=.35')
+      .from('.hero-actions .btn', {opacity:0, y:16, scale:.94, duration:.5}, '-=.3')
+      .from('.hero-photo-wrap', {opacity:0, duration:.8}, '-=.6');
+
+    gsap.utils.toArray('.sec-head').forEach(function(el){
+      gsap.from(el, {
+        opacity:0, y:24, duration:.6,
+        scrollTrigger:{trigger:el, start:'top 85%'}
+      });
+    });
+
+    gsap.utils.toArray('.card').forEach(function(el){
+      gsap.from(el, {
+        opacity:0, y:36, duration:.6, ease:'power2.out',
+        scrollTrigger:{trigger:el, start:'top 85%'}
+      });
+    });
+
+    gsap.from('.chip', {
+      opacity:0, y:14, duration:.4, stagger:.04,
+      scrollTrigger:{trigger:'.chips', start:'top 88%'}
+    });
+
+    gsap.utils.toArray('.faq details').forEach(function(el){
+      gsap.from(el, {
+        opacity:0, y:20, duration:.5,
+        scrollTrigger:{trigger:el, start:'top 90%'}
+      });
+    });
+
+    gsap.from('.final h2, .final p, .final .btn, .final .assure', {
+      opacity:0, y:24, duration:.6, stagger:.1,
+      scrollTrigger:{trigger:'.final', start:'top 75%'}
+    });
+  }
+})();
+</script>
+</body>
+</html>

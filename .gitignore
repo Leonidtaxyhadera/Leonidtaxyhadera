@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Dropbox
+.dropbox
+.dropbox.attr
+
+# Netlify CLI local state
+.netlify/
+
+# Not part of the deployed site: source renders and internal spec docs
+assets/

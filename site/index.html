@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מוניות לאוניד חדרה | מונית בחדרה והסביבה ונסיעות לנתב"ג</title>
+<meta name="description" content="מוניות לאוניד חדרה. נסיעות בחדרה ובכל הסביבה ונסיעות לנתב&quot;ג בכל שעה. מענה אישי של הנהג, בלי מוקד. חייגו 054-593-6884.">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="מוניות לאוניד חדרה | מונית בחדרה והסביבה">
+<meta property="og:description" content="נסיעות בחדרה ובכל הסביבה ונסיעות לנתב&quot;ג בכל שעה. מענה אישי של הנהג. חייגו 054-593-6884.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preload" href="fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero.webp" type="image/webp" media="(max-width:759px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-wide.webp" type="image/webp" media="(min-width:760px)" fetchpriority="high">
+
+<style>
+@font-face{font-family:'Heebo';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('fonts/heebo-hebrew.woff2') format('woff2');
+  unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('fonts/heebo-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --ink:#000;--coal:#0A0A0A;--soot:#141414;
+  --yellow:#FFC019;--yellow-deep:#E8A800;
+  --white:#fff;--grey:#E1E1E1;--grey-2:#F5F5F5;
+  --muted:#8B8B8B;
+  --bar:84px;
+  --max:1080px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--white);color:var(--ink);
+  font-family:'Heebo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  font-size:17px;line-height:1.65;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;margin:0;font-weight:900;letter-spacing:-.02em}
+p{margin:0}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px}
+
+/* ---------- header ---------- */
+.top{
+  position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 20px;max-width:var(--max);margin-inline:auto;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:17px;color:var(--white)}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;background:var(--yellow);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.brand .mark svg{width:20px;height:20px}
+.brand small{display:block;font-weight:500;font-size:12px;color:var(--yellow);letter-spacing:.04em;line-height:1}
+.top-tel{
+  display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--white);
+  font-weight:700;font-size:15px;border:1.5px solid rgba(255,255,255,.28);
+  padding:8px 14px;border-radius:999px;white-space:nowrap;
+}
+.top-tel svg{width:15px;height:15px;fill:var(--yellow)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--coal);color:var(--white);isolation:isolate;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 72%}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.62) 36%,rgba(10,10,10,.30) 60%,rgba(10,10,10,.86) 100%);
+}
+.hero-in{padding-block:10px 84px}
+@media(min-width:760px){
+  .hero-bg img{object-position:50% 55%}
+  .hero-in{padding-block:44px 120px;min-height:min(78vh,620px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .hero::before{
+    background:
+      linear-gradient(90deg,rgba(10,10,10,.15) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.92) 100%),
+      linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.20) 45%,rgba(10,10,10,.75) 100%);
+  }
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,192,25,.14);border:1px solid rgba(255,192,25,.42);
+  color:var(--yellow);font-weight:700;font-size:13.5px;letter-spacing:.01em;
+  padding:6px 13px;border-radius:999px;margin-bottom:13px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);flex:0 0 auto}
+@media (prefers-reduced-motion:no-preference){
+  .dot{animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+}
+h1{font-size:clamp(34px,9.2vw,58px);text-wrap:balance}
+h1 .hl{color:var(--yellow)}
+.lede{margin-top:13px;font-size:clamp(17px,4.4vw,20px);line-height:1.6;color:#EDEDED;max-width:34ch;text-wrap:pretty}
+
+/* ---------- call button ---------- */
+.cta{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  width:100%;max-width:460px;margin-top:21px;gap:10px;
+  background:var(--yellow);color:var(--ink);text-decoration:none;
+  font-weight:900;font-size:clamp(18px,4.7vw,23px);letter-spacing:-.01em;
+  padding:19px 18px;border-radius:16px;
+  box-shadow:0 10px 0 -2px var(--yellow-deep),0 18px 34px rgba(255,192,25,.28);
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.cta:active{transform:translateY(5px);box-shadow:0 5px 0 -2px var(--yellow-deep),0 8px 18px rgba(255,192,25,.22)}
+.cta svg{width:25px;height:25px;fill:var(--ink);flex:0 0 auto}
+.cta>span{white-space:nowrap}
+.cta .num{font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.cta--ghost{
+  background:transparent;color:var(--white);border:2px solid var(--yellow);
+  box-shadow:none;
+}
+.cta--ghost svg{fill:var(--yellow)}
+.cta--ghost:active{transform:translateY(2px);box-shadow:none}
+
+.assure{
+  display:flex;flex-wrap:wrap;gap:7px 18px;margin-top:15px;
+  font-size:14.5px;font-weight:500;color:#D2D2D2;
+}
+.assure span{display:inline-flex;align-items:center;gap:7px}
+.assure svg{width:15px;height:15px;fill:var(--yellow);flex:0 0 auto}
+
+/* wave divider */
+.wave{display:block;width:100%;height:auto;margin-top:-2px;position:relative;z-index:2}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:20px}
+.sec{padding-block:52px}
+.sec-head{text-align:center;max-width:38ch;margin-inline:auto;margin-bottom:34px}
+.sec-head h2{font-size:clamp(27px,6.6vw,38px)}
+.sec-head p{margin-top:12px;color:#5A5A5A;font-size:16.5px}
+.kicker{
+  display:block;font-weight:800;font-size:13px;letter-spacing:.13em;
+  color:var(--yellow-deep);margin-bottom:10px;
+}
+.arrow-down{display:block;margin:12px auto 0;width:22px;height:12px;fill:var(--yellow)}
+
+/* service cards */
+.cards{display:grid;gap:20px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  border:1px solid var(--grey);border-radius:20px;overflow:hidden;background:var(--white);
+  display:flex;flex-direction:column;
+}
+.card figure{margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--grey-2)}
+.card figure img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:22px 22px 24px}
+.card h3{font-size:22px;display:flex;align-items:center;gap:10px}
+.card h3 .pin{width:28px;height:28px;border-radius:8px;background:var(--yellow);display:grid;place-items:center;flex:0 0 auto}
+.card h3 .pin svg{width:16px;height:16px}
+.card p{margin-top:11px;color:#4A4A4A;font-size:16.5px}
+
+/* ---------- yellow benefits ---------- */
+.benefits{background:var(--yellow);color:var(--ink);padding:52px 0}
+.benefits .sec-head p{color:#5C4600}
+.benefits .kicker{color:#7A5C00}
+.benefits .arrow-down{fill:var(--ink)}
+.bgrid{display:grid;gap:22px}
+@media(min-width:700px){.bgrid{grid-template-columns:1fr 1fr;gap:26px 34px}}
+.ben{display:flex;gap:16px;align-items:flex-start}
+.ben .ico{
+  width:56px;height:56px;border-radius:50%;background:var(--ink);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.ben .ico svg{width:26px;height:26px;fill:var(--yellow)}
+.ben h3{font-size:19.5px}
+.ben p{margin-top:6px;font-size:16px;color:#42340A;line-height:1.6}
+
+/* ---------- why / split ---------- */
+.split{display:grid;gap:26px;align-items:center}
+@media(min-width:820px){.split{grid-template-columns:1.05fr 1fr;gap:44px}}
+.split figure{margin:0;border-radius:20px;overflow:hidden;background:var(--grey-2)}
+.split h2{font-size:clamp(26px,6.2vw,36px)}
+.split p{margin-top:14px;color:#4A4A4A;font-size:16.5px}
+.split .cta{margin-top:24px}
+
+/* ---------- areas ---------- */
+.areas{position:relative;color:var(--white);background:var(--coal);isolation:isolate;overflow:hidden;padding:52px 0}
+.areas .bg{position:absolute;inset:0;z-index:-2}
+.areas .bg img{width:100%;height:100%;object-fit:cover}
+.areas::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(10,10,10,.80)}
+.areas .sec-head p{color:#C9C9C9}
+.areas .kicker{color:var(--yellow)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{
+  border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.06);
+  padding:9px 16px;border-radius:999px;font-weight:600;font-size:15.5px;
+}
+.areas .note{text-align:center;margin-top:22px;color:#B6B6B6;font-size:15.5px}
+
+/* ---------- faq ---------- */
+.faq{max-width:760px;margin-inline:auto}
+details{border:1px solid var(--grey);border-radius:14px;background:var(--white);margin-bottom:12px;overflow:hidden}
+details[open]{border-color:var(--yellow);box-shadow:0 4px 18px rgba(0,0,0,.05)}
+summary{
+  list-style:none;cursor:pointer;padding:17px 20px;font-weight:800;font-size:17.5px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+summary::-webkit-details-marker{display:none}
+summary .plus{
+  width:26px;height:26px;border-radius:50%;background:var(--yellow);flex:0 0 auto;
+  display:grid;place-items:center;font-weight:900;font-size:17px;line-height:1;
+  transition:transform .18s ease;
+}
+details[open] summary .plus{transform:rotate(45deg)}
+details .ans{padding:0 20px 19px;color:#4A4A4A;font-size:16.5px}
+
+/* ---------- final cta ---------- */
+.final{background:var(--ink);color:var(--white);text-align:center;padding:56px 0 60px}
+.final h2{font-size:clamp(28px,7vw,40px)}
+.final h2 .hl{color:var(--yellow)}
+.final p{margin-top:14px;color:#CFCFCF;font-size:17px}
+.final .cta{margin-inline:auto}
+.final .assure{justify-content:center;margin-top:20px}
+
+/* ---------- footer ---------- */
+footer{background:var(--soot);color:#9A9A9A;font-size:14.5px;padding:30px 0 34px;text-align:center}
+footer .fbrand{color:var(--white);font-weight:800;font-size:16px}
+footer a{color:var(--yellow);text-decoration:none;font-weight:700}
+footer details{background:transparent;border:0;margin:18px auto 0;max-width:640px;text-align:start}
+footer summary{font-size:14.5px;font-weight:700;color:#B8B8B8;padding:10px 0;justify-content:center}
+footer summary .plus{width:20px;height:20px;font-size:14px;background:#333;color:var(--yellow)}
+footer details .ans{padding:0;color:#8A8A8A;font-size:14px;line-height:1.7}
+
+/* ---------- sticky call bar ---------- */
+.bar{
+  position:fixed;inset-inline:0;bottom:0;z-index:60;
+  background:rgba(10,10,10,.97);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(255,255,255,.10);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  transform:translateY(120%);transition:transform .28s ease;
+}
+.bar.show{transform:translateY(0)}
+.bar a{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--yellow);color:var(--ink);text-decoration:none;
+  font-weight:900;font-size:clamp(16.5px,4.9vw,19px);padding:15px 12px;border-radius:13px;
+  max-width:520px;margin-inline:auto;
+}
+.bar a span{white-space:nowrap}
+.bar a svg{width:21px;height:21px;fill:var(--ink);flex:0 0 auto}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+
+[dir="ltr"]{unicode-bidi:isolate;white-space:nowrap}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;inset-inline-start:-9999px;top:0;background:var(--yellow);color:#000;padding:10px 16px;z-index:100;font-weight:800}
+.skip:focus{inset-inline-start:0}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(min-width:760px)" srcset="img/hero-wide.webp" type="image/webp">
+      <source media="(min-width:760px)" srcset="img/hero-wide.jpg">
+      <source srcset="img/hero.webp" type="image/webp">
+      <img src="img/hero.jpg" alt="מונית לבנה עם שלט גג צהוב חונה ברחוב מגורים בחדרה באור אחר צהריים" fetchpriority="high" width="900" height="1297">
+    </picture>
+  </div>
+
+  <div class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 11l1.5-4A2 2 0 0 1 8.4 5.6h7.2A2 2 0 0 1 17.5 7L19 11h.5a1.5 1.5 0 0 1 1.5 1.5V17a1 1 0 0 1-1 1h-1v.5a1.5 1.5 0 0 1-3 0V18H8v.5a1.5 1.5 0 0 1-3 0V18H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.1 0h9.8l-1.1-3.1a.6.6 0 0 0-.6-.4H8.8a.6.6 0 0 0-.6.4L7.1 11zM7 13.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm10 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM9.5 2.5h5a1 1 0 0 1 0 2h-5a1 1 0 0 1 0-2z"/></svg>
+      </span>
+      <span>מוניות לאוניד<small>חדרה והסביבה</small></span>
+    </div>
+    <a class="top-tel" href="tel:0545936884" data-call="header">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+      <span dir="ltr">054-593-6884</span>
+    </a>
+  </div>
+
+  <div class="wrap hero-in">
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>זמין עכשיו לנסיעות</span>
+    <h1>מונית בחדרה<br><span class="hl">והסביבה</span></h1>
+    <p class="lede">אני לאוניד, נהג מונית בחדרה. נסיעות בעיר, בכל הסביבה ולנתב"ג. מרימים טלפון ואני כבר בדרך אליכם.</p>
+
+    <a class="cta" href="tel:0545936884" data-call="hero">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+      <span>חייגו עכשיו</span><span class="num" dir="ltr">054-593-6884</span>
+    </a>
+
+    <p class="assure">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>אני עונה אישית</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>גם בשעות הלילה</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>מחיר ברור מראש</span>
+    </p>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path fill="#ffffff" d="M0,52 C220,96 430,10 720,34 C1010,58 1240,96 1440,58 L1440,90 L0,90 Z"></path>
+  </svg>
+</header>
+
+<main id="main">
+
+<!-- ===================== SERVICES ===================== -->
+<section class="sec wrap" aria-labelledby="services-h">
+  <div class="sec-head">
+    <span class="kicker">השירותים שלי</span>
+    <h2 id="services-h">שתי נסיעות שאני עושה כל יום</h2>
+    <svg class="arrow-down" viewBox="0 0 22 12" aria-hidden="true"><path d="M11 12 0 0h22z"/></svg>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <figure>
+        <picture>
+          <source srcset="img/night.webp" type="image/webp">
+          <img src="img/night.jpg" alt="מונית לבנה נוסעת בשדרה בחדרה בשעת דמדומים, ארובות תחנת הכוח באופק" loading="lazy" width="1400" height="788">
+        </picture>
+      </figure>
+      <div class="card-body">
+        <h3>
+          <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 6.2 12.3 6.5 12.6a.7.7 0 0 0 1 0C12.8 21.3 19 14.1 19 9a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg></span>
+          נסיעות בחדרה ובסביבה
+        </h3>
+        <p>לעבודה, לקופת חולים, לקניות או לערב בחוץ. אני מגיע אליכם מהר ואתם יודעים בדיוק מי הנהג שמחכה לכם למטה.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <figure>
+        <picture>
+          <source srcset="img/airport.webp" type="image/webp">
+          <img src="img/airport.jpg" alt="מונית לבנה עם תא מטען פתוח ומזוודה ממתינה בטרמינל נתב&quot;ג לפנות בוקר" loading="lazy" width="1000" height="750">
+        </picture>
+      </figure>
+      <div class="card-body">
+        <h3>
+          <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span>
+          נסיעות לנתב"ג
+        </h3>
+        <p>טיסה מוקדמת זה הזמן שהכי קל להילחץ בו. אני אוסף אתכם מהבית בשעה שסיכמנו, עם מקום למזוודות, ואתם מגיעים לטרמינל רגועים ובזמן.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== BENEFITS ===================== -->
+<section class="benefits" aria-labelledby="benefits-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">למה אצלי</span>
+      <h2 id="benefits-h">נהג אחד, שאתם מכירים בשם</h2>
+      <svg class="arrow-down" viewBox="0 0 22 12" aria-hidden="true"><path d="M11 12 0 0h22z"/></svg>
+    </div>
+
+    <div class="bgrid">
+      <div class="ben">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg></span>
+        <div>
+          <h3>מענה אישי, לא מוקד</h3>
+          <p>אתם מתקשרים ואני עונה. אין תפריט, אין תור ואין מי שמעביר אתכם הלאה.</p>
+        </div>
+      </div>
+
+      <div class="ben">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 6.2 12.3 6.5 12.6a.7.7 0 0 0 1 0C12.8 21.3 19 14.1 19 9a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg></span>
+        <div>
+          <h3>אני מכיר את חדרה</h3>
+          <p>אני יודע איפה הפקקים, איפה חוסמים ומה הדרך הכי קצרה לכל כתובת בעיר.</p>
+        </div>
+      </div>
+
+      <div class="ben">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.9 10.4-3.9 2.4-.9-1.5 3-1.9V6h1.8z"/></svg></span>
+        <div>
+          <h3>זמין גם בשעות הלילה</h3>
+          <p>טיסה בחמש בבוקר או חזרה מאוחרת מהעיר, זה חלק מהעבודה שלי.</p>
+        </div>
+      </div>
+
+      <div class="ben">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 11l1.5-4A2 2 0 0 1 8.4 5.6h7.2A2 2 0 0 1 17.5 7L19 11h.5a1.5 1.5 0 0 1 1.5 1.5V17a1 1 0 0 1-1 1h-1v.5a1.5 1.5 0 0 1-3 0V18H8v.5a1.5 1.5 0 0 1-3 0V18H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.1 0h9.8l-1.1-3.1a.6.6 0 0 0-.6-.4H8.8a.6.6 0 0 0-.6.4L7.1 11zM7 13.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm10 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></span>
+        <div>
+          <h3>רכב נקי ונוח</h3>
+          <p>עם מקום למזוודות ונסיעה שקטה, בלי הפתעות באמצע הדרך.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY / SPLIT ===================== -->
+<section class="sec wrap" aria-labelledby="why-h">
+  <div class="split">
+    <figure>
+      <picture>
+        <source srcset="img/interior.webp" type="image/webp">
+        <img src="img/interior.jpg" alt="מבט ממושב הנוסע האחורי במונית נקייה, הנהג אוחז בהגה בכביש חוף בשעת שקיעה" loading="lazy" width="1000" height="620">
+      </picture>
+    </figure>
+    <div>
+      <span class="kicker">הנסיעה עצמה</span>
+      <h2 id="why-h">נסיעה שאתם לא צריכים לדאוג לגביה</h2>
+      <p>אני נוהג באזור חדרה כבר שנים ואני מכיר את הכבישים, את הפקקים ואת הדרך הכי קצרה לכל מקום. הרכב נקי, הנסיעה שקטה, ואם צריך לעצור רגע בדרך, זה בסדר גמור.</p>
+      <p>ואם אתם מזמינים מראש, אני אדאג להיות אצלכם בשעה שסיכמנו ולא רבע שעה אחריה.</p>
+      <a class="cta" href="tel:0545936884" data-call="why">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+        <span>להזמנה</span><span class="num" dir="ltr">054-593-6884</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AREAS ===================== -->
+<section class="areas" aria-labelledby="areas-h">
+  <div class="bg">
+    <picture>
+      <source srcset="img/night.webp" type="image/webp">
+      <img src="img/night.jpg" alt="" aria-hidden="true" loading="lazy" width="1400" height="788">
+    </picture>
+  </div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">אזורי שירות</span>
+      <h2 id="areas-h">לאן אני מגיע</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">חדרה</span>
+      <span class="chip">פרדס חנה-כרכור</span>
+      <span class="chip">בנימינה</span>
+      <span class="chip">גבעת עדה</span>
+      <span class="chip">אור עקיבא</span>
+      <span class="chip">קיסריה</span>
+      <span class="chip">זכרון יעקב</span>
+      <span class="chip">חריש</span>
+      <span class="chip">כפר ויתקין</span>
+      <span class="chip">עמק חפר</span>
+      <span class="chip">מעגן מיכאל</span>
+    </div>
+    <p class="note">נוסעים למקום אחר בארץ? תרימו טלפון ונסגור.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec wrap" aria-labelledby="faq-h">
+  <div class="sec-head">
+    <span class="kicker">שאלות ותשובות</span>
+    <h2 id="faq-h">מה שרוב האנשים שואלים אותי</h2>
+  </div>
+
+  <div class="faq">
+    <details>
+      <summary>כמה זמן לוקח לך להגיע?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">בתוך חדרה אני בדרך כלל אצלכם תוך כמה דקות. אם אני באמצע נסיעה אני אגיד לכם בטלפון בדיוק כמה זמן לחכות, בלי לעגל פינות.</div>
+    </details>
+
+    <details>
+      <summary>אפשר להזמין נסיעה מראש?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">כן, וזה גם מה שאני ממליץ לנסיעות לנתב"ג. מתקשרים, סוגרים שעה ואני שם. אם הטיסה שלכם מוקדמת, עדיף לסגור יום קודם.</div>
+    </details>
+
+    <details>
+      <summary>כמה עולה נסיעה לנתב"ג?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">תלוי מאיפה אתם יוצאים ובאיזו שעה. מרימים טלפון, אני אומר לכם מחיר ואתם יודעים בדיוק על מה סיכמנו לפני שיוצאים לדרך.</div>
+    </details>
+
+    <details>
+      <summary>אתה נוסע גם בלילה ובסופי שבוע?<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">כן. טיסות מוקדמות ונסיעות לילה זה חלק מהעבודה שלי. הכי טוב לתאם מראש בטלפון ואני אגיד לכם אם אני פנוי.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">צריכים מונית <span class="hl">עכשיו?</span></h2>
+    <p>תרימו טלפון, אני עונה ויוצא אליכם.</p>
+    <a class="cta" href="tel:0545936884" data-call="final">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+      <span>חייגו עכשיו</span><span class="num" dir="ltr">054-593-6884</span>
+    </a>
+    <p class="assure">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>לאוניד עונה</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2z"/></svg>חדרה והסביבה</span>
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fbrand">מוניות לאוניד חדרה</p>
+    <p>נסיעות בחדרה ובסביבה ונסיעות לנתב"ג · <a href="tel:0545936884" data-call="footer"><span dir="ltr">054-593-6884</span></a></p>
+
+    <details>
+      <summary>הצהרת נגישות<span class="plus" aria-hidden="true">+</span></summary>
+      <div class="ans">
+        אנחנו רואים חשיבות בכך שכל אחד יוכל להשתמש בדף הזה. הדף נבנה עם ניגודיות צבע גבוהה, טקסט בגודל קריא, ניווט מלא באמצעות המקלדת, תיאורים חלופיים לתמונות ומבנה כותרות תקין לקוראי מסך. אם נתקלתם בבעיית נגישות כלשהי, נשמח שתתקשרו אלינו למספר <span dir="ltr">054-593-6884</span> ונטפל בה.
+      </div>
+    </details>
+  </div>
+</footer>
+
+<!-- ===================== STICKY CALL BAR ===================== -->
+<div class="bar" id="bar">
+  <a href="tel:0545936884" data-call="sticky">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"/></svg>
+    <span>חייגו ללאוניד</span><span dir="ltr">054-593-6884</span>
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TaxiService",
+  "name":"מוניות לאוניד חדרה",
+  "description":"נסיעות במונית בחדרה ובכל הסביבה ונסיעות לנמל התעופה בן גוריון, עם מענה אישי של הנהג.",
+  "telephone":"+972545936884",
+  "areaServed":[
+    {"@type":"City","name":"חדרה"},
+    {"@type":"City","name":"פרדס חנה-כרכור"},
+    {"@type":"City","name":"בנימינה"},
+    {"@type":"City","name":"גבעת עדה"},
+    {"@type":"City","name":"אור עקיבא"},
+    {"@type":"City","name":"קיסריה"},
+    {"@type":"City","name":"זכרון יעקב"},
+    {"@type":"City","name":"חריש"}
+  ],
+  "provider":{
+    "@type":"LocalBusiness",
+    "name":"מוניות לאוניד חדרה",
+    "telephone":"+972545936884",
+    "address":{"@type":"PostalAddress","addressLocality":"חדרה","addressCountry":"IL"}
+  }
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- sticky call bar: appears once the hero CTA scrolls out of view ---- */
+  var bar = document.getElementById('bar');
+  var heroCta = document.querySelector('.hero .cta');
+
+  if (bar && heroCta && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      bar.classList.toggle('show', !entries[0].isIntersecting);
+    }, {threshold: 0}).observe(heroCta);
+  } else if (bar) {
+    bar.classList.add('show');
+  }
+
+  /* ---- call-click conversion hook ----------------------------------------
+     Paste the Google Ads phone-call conversion snippet into the page and this
+     fires it on every call button. Works with gtag, GTM or neither.
+     ---------------------------------------------------------------------- */
+  document.querySelectorAll('a[data-call]').forEach(function(link){
+    link.addEventListener('click', function(){
+      var where = link.getAttribute('data-call');
+
+      if (typeof window.gtag_report_conversion === 'function') {
+        window.gtag_report_conversion();
+      } else if (typeof window.gtag === 'function') {
+        window.gtag('event', 'call_click', {placement: where});
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event: 'call_click', placement: where});
+    }, {passive: true});
+  });
+})();
+</script>
+</body>
+</html>
