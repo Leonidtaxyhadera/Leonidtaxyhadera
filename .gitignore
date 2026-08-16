@@ -10,3 +10,6 @@
 
 # Not part of the deployed site: source renders and internal spec docs
 assets/
+
+# Claude Code local settings
+.claude/
